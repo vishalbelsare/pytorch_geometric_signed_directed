@@ -1,14 +1,13 @@
 from setuptools import find_packages, setup
 
 url = "https://github.com/SherylHYX/pytorch_geometric_signed_directed"
-__version__ = '0.22.1'
+__version__ = '1.0.1'
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 install_requires = [
     "torch",
-    "torch_sparse",
     "scikit-learn",
     "torch_geometric",
     "numpy",
@@ -16,9 +15,9 @@ install_requires = [
     "scipy"
 ]
 
-setup_requires = ["pytest-runner"]
-
-tests_require = ["pytest", "pytest-cov", "mock"]
+extras_require = {
+    "test": ["pytest", "pytest-cov", "mock"]
+}
 
 keywords = [
     "machine-learning",
@@ -53,13 +52,12 @@ setup(
     download_url='{}/archive/{}.tar.gz'.format(url, __version__),
     keywords=keywords,
     install_requires=install_requires,
-    setup_requires=setup_requires,
-    tests_require=tests_require,
+    extras_require=extras_require,
     python_requires=">=3.7",
     classifiers=[
         "Intended Audience :: Developers",
         "Topic :: Software Development :: Build Tools",
         "License :: OSI Approved :: MIT License",
-        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.9",
     ],
 )

@@ -11,7 +11,7 @@
   <img width="90%" src="https://raw.githubusercontent.com/SherylHYX/pytorch_geometric_signed_directed/master/docs/source/_static/img/text_logo.jpg?sanitize=true" />
 </p>
 
-**[Documentation](https://pytorch-geometric-signed-directed.readthedocs.io)** | **[Case Study](https://pytorch-geometric-signed-directed.readthedocs.io/en/latest/notes/case_study.html)** | **[Installation](https://pytorch-geometric-signed-directed.readthedocs.io/en/latest/notes/installation.html)** | **[Data Structures](https://pytorch-geometric-signed-directed.readthedocs.io/en/latest/notes/introduction.html#data-structures)** | **[External Resources](https://pytorch-geometric-signed-directed.readthedocs.io/en/latest/notes/resources.html)** | **[Paper](https://arxiv.org/pdf/2202.10793.pdf)**
+**[Documentation](https://pytorch-geometric-signed-directed.readthedocs.io)** | **[Case Study](https://pytorch-geometric-signed-directed.readthedocs.io/en/latest/notes/case_study.html)** | **[Data Set Descriptions](https://pytorch-geometric-signed-directed.readthedocs.io/en/latest/notes/datasets.html)** | **[Installation](https://pytorch-geometric-signed-directed.readthedocs.io/en/latest/notes/installation.html)** | **[Data Structures](https://pytorch-geometric-signed-directed.readthedocs.io/en/latest/notes/introduction.html#data-structures)** | **[External Resources](https://pytorch-geometric-signed-directed.readthedocs.io/en/latest/notes/resources.html)** | **[Paper](https://arxiv.org/pdf/2202.10793.pdf)**
 
 -----------------------------------------------------
 
@@ -30,12 +30,14 @@ We also provide detailed examples in the [examples](https://github.com/SherylHYX
 If you find *PyTorch Geometric Signed Directed* useful in your research, please consider adding the following citation:
 
 ```bibtex
-@article{he2022pytorch,
-        title={{PyTorch Geometric Signed Directed: A Software Package on Graph Neural Networks for Signed and Directed Graphs}},
-        author={He, Yixuan and Zhang, Xitong and Huang, Junjie and Rozemberczki, Benedek and Cucuringu, Mihai and Reinert, Gesine},
-        journal={arXiv preprint arXiv:2202.10793},
-        year={2022}
-        }
+@inproceedings{he2024pytorch,
+  title={Pytorch Geometric Signed Directed: A software package on graph neural networks for signed and directed graphs},
+  author={He, Yixuan and Zhang, Xitong and Huang, Junjie and Rozemberczki, Benedek and Cucuringu, Mihai and Reinert, Gesine},
+  booktitle={Learning on Graphs Conference},
+  pages={12--1},
+  year={2024},
+  organization={PMLR}
+}
 ```
 
 --------------------------------------------------------------------------------
@@ -169,16 +171,16 @@ In detail, the following signed or directed graph neural networks, as well as re
 
 **Task-Specific Objectives and Evaluation Methods**
 
-* **[Probablistic Balanced Normalized Loss](https://pytorch-geometric-signed-directed.readthedocs.io/en/latest/modules/utils.html#torch_geometric_signed_directed.utils.signed.prob_balanced_normalized_loss.Prob_Balanced_Normalized_Loss)** from He *et al.*: [SSSNET: Semi-Supervised Signed Network Clustering](https://arxiv.org/pdf/2110.06623.pdf) (SDM 2022)
+* **[Probabilistic Balanced Normalized Loss](https://pytorch-geometric-signed-directed.readthedocs.io/en/latest/modules/utils.html#torch_geometric_signed_directed.utils.signed.prob_balanced_normalized_loss.Prob_Balanced_Normalized_Loss)** from He *et al.*: [SSSNET: Semi-Supervised Signed Network Clustering](https://arxiv.org/pdf/2110.06623.pdf) (SDM 2022)
 
 
-* **[Probablistic Imbalance Objective](https://pytorch-geometric-signed-directed.readthedocs.io/en/latest/modules/utils.html#torch_geometric_signed_directed.utils.directed.prob_imbalance_loss.Prob_Imbalance_Loss)** from He *et al.*: [DIGRAC: Digraph Clustering Based on Flow Imbalance.](https://proceedings.mlr.press/v198/he22b.html) (LoG 2022)
+* **[Probabilistic Imbalance Objective](https://pytorch-geometric-signed-directed.readthedocs.io/en/latest/modules/utils.html#torch_geometric_signed_directed.utils.directed.prob_imbalance_loss.Prob_Imbalance_Loss)** from He *et al.*: [DIGRAC: Digraph Clustering Based on Flow Imbalance.](https://proceedings.mlr.press/v198/he22b.html) (LoG 2022)
 
 
 <details>
 <summary><b>Expand to see all task-specific objectives and evaluation methods...</b></summary>
 
-* **[Probablistic Balanced Ratio Loss](https://pytorch-geometric-signed-directed.readthedocs.io/en/latest/modules/utils.html#torch_geometric_signed_directed.utils.signed.prob_balanced_ratio_loss.Prob_Balanced_Ratio_Loss)** from He *et al.*: [SSSNET: Semi-Supervised Signed Network Clustering](https://arxiv.org/pdf/2110.06623.pdf) (SDM 2022)
+* **[Probabilistic Balanced Ratio Loss](https://pytorch-geometric-signed-directed.readthedocs.io/en/latest/modules/utils.html#torch_geometric_signed_directed.utils.signed.prob_balanced_ratio_loss.Prob_Balanced_Ratio_Loss)** from He *et al.*: [SSSNET: Semi-Supervised Signed Network Clustering](https://arxiv.org/pdf/2110.06623.pdf) (SDM 2022)
 
 * **[Unhappy Ratio](https://pytorch-geometric-signed-directed.readthedocs.io/en/latest/modules/utils.html#torch_geometric_signed_directed.utils.signed.unhappy_ratio.Unhappy_Ratio)** from He *et al.*: [SSSNET: Semi-Supervised Signed Network Clustering](https://arxiv.org/pdf/2110.06623.pdf) (SDM 2022)
   
@@ -256,7 +258,7 @@ pip install torch-geometric-signed-directed
 **Running tests**
 
 ```
-$ python setup.py test
+$ pytest
 ```
 --------------------------------------------------------------------------------
 
